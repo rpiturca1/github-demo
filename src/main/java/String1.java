@@ -1,5 +1,5 @@
-public class String1 {
-    public static void main (String[] args) {
+//public class String1 {
+//    public static void main (String[] args) {
 //        System.out.printf("byte minimum= %s, maximum= %s%n", Byte.MIN_VALUE, Byte.MAX_VALUE);
 //        System.out.printf("short minimum= %s, maximum= %s%n", Short.MIN_VALUE, Short.MAX_VALUE);
 //        System.out.printf("int minimum= %s, maximum= %s%n", Integer.MIN_VALUE, Integer.MAX_VALUE);
@@ -9,7 +9,7 @@ public class String1 {
 
 //        int answer = 7 + 3 * 4;
 //        System.out.println(answer);
-
+//
 //        int x = 3;
 //        int y = x++;
 //        System.out.printf("Using x++, x is %s and y is %s.%n", x, y);

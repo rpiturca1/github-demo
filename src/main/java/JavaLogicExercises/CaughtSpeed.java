@@ -1,5 +1,3 @@
-package JavaLogicExercises;
-
 public class CaughtSpeed {
 
     public static void main(String[] args) {
@@ -25,7 +23,9 @@ public class CaughtSpeed {
                 return 1;
             if (speed >= 81)
                 return 2;
-        }}
+            }
+        return 1;
+    }}
 
 
 

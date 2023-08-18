@@ -1,28 +1,50 @@
 package dev.lpa;
 
+import java.util.Arrays;
+import java.util.Random;
+
 public class Main {
 
     public static void main(String[] args) {
 
-        int[] myIntArray = new int[10];
-        myIntArray[0] = 45;
-        myIntArray[1] = 1;
-        myIntArray[5] = 50;
+        int[] unsortedArray = getRandomArray(5);
+        System.out.println(Arrays.toString(unsortedArray));
 
-        double[] myDoubleArray = new double[10];
-        myDoubleArray[2] = 3.5;
-        System.out.println(myDoubleArray[2]);
+        int[] sortedArray = sortIntegers(new int[] {7, 30, 35});
+        System.out.println(Arrays.toString(sortedArray));
+    }
 
-        int[] firstTen = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-        System.out.println("first = " + firstTen[0]);
-        int arrayLength = firstTen.length;
-        System.out.println("length of array = " + arrayLength);
-        System.out.println("last = " + firstTen[arrayLength - 1]);
+    public static int[] getRandomArray(int len) {
 
-        int[] newArray;
-        newArray = new int[] {5, 4, 3, 2, 1};
-        for (int i = 0; i < newArray.length; i++) {
-            System.out.print(newArray[i] + " ");
+        Random random = new Random();
+        int[] randomArray = new int[len];
+        for (int i = 0; i < len; i++) {
+            randomArray[i] = random.nextInt(1000);
         }
+
+        return randomArray;
+    }
+
+    private static int[] sortIntegers(int[] array) {
+
+        System.out.println(Arrays.toString(array));
+        int[] sortedArray = Arrays.copyOf(array, array.length);
+        boolean flag = true;
+        int temp;
+        while (flag) {
+            flag = false;
+            for (int i = 0; i < sortedArray.length - 1; i++) {
+                if (sortedArray[i] < sortedArray[i + 1]) {
+                    temp = sortedArray[i];
+                    sortedArray[i] = sortedArray[i + 1];
+                    sortedArray[i + 1] = temp;
+                    flag = true;
+                    System.out.println("----->" + Arrays.toString(sortedArray));
+                }
+            }
+            System.out.println("-->" + Arrays.toString(sortedArray));
+        }
+
+        return sortedArray;
     }
 }

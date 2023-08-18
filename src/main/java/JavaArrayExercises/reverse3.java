@@ -3,17 +3,16 @@ package JavaArrayExercises;
 public class reverse3 {
 
     public static void main(String[] args) {
-        System.out.println(reverse3([1,2,3])); //3,2,1
-        System.out.println(reverse3([5,11,9]);
-        System.out.println(reverse3([7,0,0]);
-
+        int[] result = reverse3(new int[]{1, 2, 3});
+        for (int num : result) {
+            System.out.print(num + " ");
+        }
     }
 
-    public static int[] reverse3(int[] nums) {
+    public static int[] reverse3(int[] nums)
+    {
 
-        int[] myArray =  int[3];
-
-
+        int[] myArray =  new int[3];
 
         myArray[0] = nums[2];
 
@@ -22,8 +21,6 @@ public class reverse3 {
         myArray[2] = nums[0];
 
         return myArray;
-
-
 
 
     }
